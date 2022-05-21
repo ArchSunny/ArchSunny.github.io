@@ -1,14 +1,54 @@
 <html lang="zh-CN">
 <head>
 <!--/公共jsp -->
-<meta charset="UTF-8">
-<meta name="renderer" content="webkit">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<!-- 用来禁止浏览器缓存，使得每次请求test.html都从服务器下载最新版本 -->
-<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-<meta http-equiv="Pragma" content="no-cache">
-<meta http-equiv="Expires" content="0">
-<meta name="format-detection" content="telephone=yes">
+function setHeight(obj)
+{
+  var temHeight=null;
+  //FF
+  if(window.innerHeight)
+  {
+    temHeight=window.innerHeight;//包括页面高度和滚动条高度
+  }
+  else 
+  {
+     temHeight=document.body&&document.body.clientHeight;
+  }
+  if(temHeight>document.body.clientHeight)//页面高度
+  {
+     oDiv.style.height=temHeight+"px";
+  }
+  else
+  {
+    oDiv.style.height=document.body.clientHeight+"px";
+  }
+}
+window.οnlοad=function()
+{
+  var oDiv=document.getElementById("div1");
+  getHeight(oDiv);
+}
+function  setWidth(obj)
+{
+     var screenWidth = window.screen.width;    
+     var width;
+     var imgURL ;
+     if (screenWidth >= 1440) 
+     {
+         width = "1400px";
+         imgURL = "1400.png";
+     }
+     else if (1024 < screenWidth && screenWidth < 1440) 
+     {
+         width = "1200px";
+         imgURL = "1200.png";
+     } 
+      else {
+          width = "980px";
+          imgURL = "980.png";
+        }
+       obj.style.width=width ;
+       obj.style.backgroundImage="url(" + imgURL + ")";
+  })
 <script>
         var SERVER_PATH = "https://res.hainanu.edu.cn";
         var pageMeta = {"datas":{},"models":[],"routes":{},"params":{"curDate":"2022-05-21 20:31:56","userId":"20182212310020","roleId":null}} ;
