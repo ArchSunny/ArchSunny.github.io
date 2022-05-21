@@ -3,6 +3,7 @@
 <head>
 <title>请假</title>
 <!--/公共jsp -->
+
  <meta name=”viewport” content=”width=device-width, initial-scale=1″ />
 <meta charset="UTF-8">
 <meta name="renderer" content="webkit">
@@ -130,6 +131,16 @@
 <head>
 
 <body>
+<div id="body">
+    <div id="center">中间</div>
+</div>
+<div id="left">左边</div>
+<div id="right">右边</div>
+#body{width:100%;float:left;} 
+#body #center{background:red;margin-left:200px;margin-right:300px;} 
+#left{width:200px;background:yellow;margin-left:-100%;float:left}
+#right{width:300px;background:blue;margin-left:-300px;float:left}
+
 <div id="app">
 <!---->
 <div>
