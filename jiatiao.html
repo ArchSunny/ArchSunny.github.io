@@ -139,16 +139,23 @@
 
 
 <script>
-
-function function ChangeDiv()
-
-{
-
-document.getElementById("1").innerHTML="内容2";
-
-}
-
-
+	var btns=document.getElementsByClassName("edit_border");
+	var texts = document.getElementsByTagName("textarea");
+	window.onload = function(){
+		//点击编辑按钮，编辑按钮变为保存按钮
+		for(var a = 0;a< btns.length;a++){
+			btns[a].index = a;
+			$(btns[a]).click(function() {
+				if($(this).text() == '编辑') {
+					$(this).text('保存');
+					$(this).addClass("edit_bordered").siblings().attr("disabled", false).addClass('edit_contained').text('')
+				}else {
+					$(this).text('编辑');
+					$(this).removeClass("edit_bordered").siblings().attr("disabled", true).removeClass('edit_contained');
+				}
+			})
+		}
+	}
 </script>
 
 
@@ -893,13 +900,8 @@ window.onload = loadJScript;
 
 
 
-
-<br> <br> <br>
-
-<div id = "1" >；内容1</div>
-
-<input type="button" onclick="function ChangeDiv()" value="定位销假" />
-
+<button class="edit_border">编辑</button>
+<textarea  class="edit_contain" placeholder="请输入内容" value="" disabled="disabled"></textarea>
 
 <body>
 
