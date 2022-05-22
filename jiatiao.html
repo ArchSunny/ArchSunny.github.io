@@ -137,25 +137,17 @@
 
 
 
-<script>
-	var btns=document.getElementsByClassName("edit_border");
-	var texts = document.getElementsByTagName("textarea");
-	window.onload = function(){
-		//点击编辑按钮，编辑按钮变为保存按钮
-		for(var a = 0;a< btns.length;a++){
-			btns[a].index = a;
-			$(btns[a]).click(function() {
-				if($(this).text() == '编辑') {
-					$(this).text('保存');
-					$(this).addClass("edit_bordered").siblings().attr("disabled", false).addClass('edit_contained').text('')
-				}else {
-					$(this).text('编辑');
-					$(this).removeClass("edit_bordered").siblings().attr("disabled", true).removeClass('edit_contained');
-				}
-			})
-		}
-	}
-</script>
+<style>
+            th{
+                width: 110px;
+                line-height: 25px;
+                background: #eee;
+            }
+            input{
+                width: 108px;
+                line-height: 23px;
+            }
+        </style>
 
 
 <head>
@@ -899,9 +891,50 @@ window.onload = loadJScript;
 
 
 
-<button class="edit_border">编辑</button>
-<textarea  class="edit_contain" placeholder="请输入内容" value="" disabled="disabled"></textarea>
-
+<table>
+            <tr>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+                <th>5</th>
+                <th>6</th>
+                <th ><a id="edit" href="#">编辑</a></th>
+            </tr>
+        </table>
+        <script>
+            var statu = 0;
+            var edit = document.getElementById('edit');
+            var item = document.getElementsByTagName('th');
+            var item_length = item.length-1
+            var item_value = new Array(item_length);
+             
+            for(i = 0; i < item_length; i++){
+                item_value[i] = item[i].innerHTML;
+            }
+             
+            edit.onclick =function(){
+                if(statu == 0){
+                    edit.innerHTML= '保存';
+                    for(i = 0; i < item_length; i++){
+                        item[i].innerHTML = '<input type="txt" class="item_input" value="'+item_value[i]+'">';
+                    }
+                    statu = 1;
+                }else{
+                    edit.innerHTML= '编辑';
+                    var item_input = document.getElementsByClassName('item_input');
+                    for(i = 0; i < item_length; i++){
+                        item_value[i] = item_input[i].value;
+                    }
+                    for(i = 0; i < item_length; i++){
+                        item[i].innerHTML = item_value[i];
+                    }
+                    statu = 0
+                }
+                return false;
+            }
+        </script>
+、
 <body>
 
 
