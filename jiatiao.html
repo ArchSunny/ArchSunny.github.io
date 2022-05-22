@@ -135,13 +135,18 @@
 <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="modules/qjsq/detail/xsqjsqxq" src="./modules/qjsq/detail/xsqjsqxq.js"></script>
 <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="api" src="./api.js"></script>
 
+
 <script>
-    function myFunction() {
-        x = document.getElementById("claa");
-        x.innerHTML = "终于能改变这句话了";
-        y = document.getElementById("clab")
-        y.innerHTML = "怎么样，改变了吧"
-    }
+
+function ChangeDiv()
+
+{
+
+document.getElementById("1").innerHTML="内容2";
+
+}
+
+</script>
 
 </script>
 
@@ -888,7 +893,12 @@ window.onload = loadJScript;
 </div>
 
 
-<button id="clab" type="button" onclick="myFunction()">定位销假</button>
+<button id="clab" type="button" onclick="function ChangeDiv() ">定位销假</button>
+<br> <br> <br>
+
+<div id = "1" >；内容1</div>
+
+<input type="button" onclick="ChangeDiv()" value="<!---->" />
 
 <body>
 <html
