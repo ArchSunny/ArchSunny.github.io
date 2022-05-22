@@ -136,17 +136,12 @@
 <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="api" src="./api.js"></script>
 
 
-<script>
+<script>  
+        function change(n){
+            document.getElementById('inputbox').style.display=n?'block':'none';    
+        }
+     </script> 
 
-function ChangeDiv()
-
-{
-
-document.getElementById("1").innerHTML="内容2";
-
-}
-
-</script>
 
 </script>
 
@@ -891,14 +886,37 @@ window.onload = loadJScript;
 
 
 <button id="clab" type="button" onclick="function ChangeDiv() ">定位销假</button>
-<br> <br> <br>
 
-<div id = "1" >；内容1</div>
 
-<input type="button" onclick="ChangeDiv()" value="<!---->" />
+
+<div id="div1">
+<input type="button" onClick="change(1)" value="修改">
+	<table>
+    	<tr>
+        	<td width="62"><a href="www.taobao.com" target="_blank">淘宝</a></td>
+        <tr>
+        	<td><a href="www.taobao.com" target="_blank">淘宝</a></td>
+        </tr>
+        <tr>
+        	<td><a href="www.taobao.com" target="_blank">淘宝</a></td>
+        </tr>
+        </tr>
+    </table>
+</div>
+
+<div id='inputbox' class="box">
+        <a class='x' href=''; onclick="change; return false;">关闭</a>
+        <p>新名称：</p><input type="text">
+        <p>新网址：</p><input type="text">
+        <input type="button" value="确定">
+</div>
 
 <body>
+
+
 <html
+
+
 
 
 
