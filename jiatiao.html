@@ -16,17 +16,17 @@
 <meta http-equiv="Expires" content="0">
 <meta name="format-detection" content="telephone=yes">
 
-<script type="text/javascript">
-    function init(){document.onkeydown=showKeyDown; }
-    function showKeyDown(evt){
-        evt = (evt) ? evt : window.event ;
+<script>
+    function myFunction() {
 
-        if(evt.keyCode==38){
-            fun1(); 
-        }
-    }
-    function fun1(){
-        alert("功能一测试");
+        x = document.getElementById("claa");
+
+        x.innerHTML = "终于能改变这句话了";
+
+        y = document.getElementById("clab")
+
+        y.innerHTML = "怎么样，改变了吧"
+
     }
 
 </script>
@@ -155,11 +155,12 @@
 
 }
 
-<body onload="init()">
-    <div align="center">
+<p id="claa">我要改变这句话</p>
+<button id="clab" type="button" onclick="myFunction()">
 
-        <button onclick="fun1()">功能一测试</button>
-    </div>
+    点击我吧，就能改变了哦
+
+</button>
 
 <div id="app">
 <!---->
