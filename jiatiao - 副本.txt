@@ -1,54 +1,20 @@
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
+<title>请假</title>
 <!--/公共jsp -->
-function setHeight(obj)
-{
-  var temHeight=null;
-  //FF
-  if(window.innerHeight)
-  {
-    temHeight=window.innerHeight;//包括页面高度和滚动条高度
-  }
-  else 
-  {
-     temHeight=document.body&&document.body.clientHeight;
-  }
-  if(temHeight>document.body.clientHeight)//页面高度
-  {
-     oDiv.style.height=temHeight+"px";
-  }
-  else
-  {
-    oDiv.style.height=document.body.clientHeight+"px";
-  }
-}
-window.οnlοad=function()
-{
-  var oDiv=document.getElementById("div1");
-  getHeight(oDiv);
-}
-function  setWidth(obj)
-{
-     var screenWidth = window.screen.width;    
-     var width;
-     var imgURL ;
-     if (screenWidth >= 1440) 
-     {
-         width = "1400px";
-         imgURL = "1400.png";
-     }
-     else if (1024 < screenWidth && screenWidth < 1440) 
-     {
-         width = "1200px";
-         imgURL = "1200.png";
-     } 
-      else {
-          width = "980px";
-          imgURL = "980.png";
-        }
-       obj.style.width=width ;
-       obj.style.backgroundImage="url(" + imgURL + ")";
-  })
+
+ <meta name="viewport" content="width=device-width, initial-scale=1″ />
+@media screen and （max-width：720px）
+
+<meta charset="UTF-8">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- 用来禁止浏览器缓存，使得每次请求test.html都从服务器下载最新版本 -->
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="format-detection" content="telephone=yes">
 <script>
         var SERVER_PATH = "https://res.hainanu.edu.cn";
         var pageMeta = {"datas":{},"models":[],"routes":{},"params":{"curDate":"2022-05-21 20:31:56","userId":"20182212310020","roleId":null}} ;
@@ -166,7 +132,12 @@ function  setWidth(obj)
 <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="api" src="./api.js"></script>
 <head>
 
+
 <body>
+@media screen and (max-width: 720px) {
+
+}
+
 <div id="app">
 <!---->
 <div>
@@ -184,8 +155,9 @@ function  setWidth(obj)
 <div class="emapm-form emapm-form-readonly">
 <div class="emapm-items">
 <div class="mint-cell-group mt-bg-lv2">
-<div class="mint-cell-group-title mt-color-grey-lv3 emap-cellgroup-hastitle">请假信息</div>
+<div class="mint-cell-group-title mt-color-grey-lv3 emap-cellgroup-hastitle">  请假信息</div>
 <div class="mint-cell-group-content mint-hairline--top-bottom mt-bg-white mt-bColor-after-grey-lv5">
+<!---->
 <div class="emapm-item">
 <div data-v-687a3f65="">
 <a data-v-687a3f65="" class="mint-cell mt-bg-white mt-bColor-grey-lv5">
@@ -195,7 +167,7 @@ function  setWidth(obj)
 <div class="mint-cell-title" style="flex: 1 1 96px; min-width: 96px;">
 <!---->
 <!---->
-<span class="mint-cell-text mt-color-grey-lv3">请假类型</span>
+<span class="mint-cell-text mt-color-grey-lv3">  请假类型</span>
 <!---->
 </div>
 <div class="mint-cell-value mt-color-grey-lv3" style="flex: 1 1 calc(100% - 96px); justify-content: normal;">
@@ -572,11 +544,11 @@ function  setWidth(obj)
 
 <div class="emapm-items">
 <div class="mint-cell-group mt-bg-lv2">
-<!---->
-<div class="mint-cell-group-content mint-hairline--top-bottom mt-bg-white mt-bColor-after-grey-lv5">
+
+
 <div class="emapm-item">
 <div>
-<a class="mint-cell mt-bg-white mt-bColor-grey-lv5">
+<a data-v-687a3f65="" class="mint-cell mt-bg-white mt-bColor-grey-lv5">
 <!---->
 <div class="mint-cell-left"></div>
 
@@ -651,7 +623,7 @@ function  setWidth(obj)
 </div>
 
 <div class="emapm-items">
-<div class="mint-cell-group-group mt-bg-lv2">
+<div class="mint-cell-group mt-bg-lv2">
 <div class="mint-cell-group-title mt-color-grey-lv3 emap-cellgroup-hastitle">基本信息</div>
 
 <div class="mint-cell-group-content mint-hairline--top-bottom mt-bg-white mt-bColor-after-grey-lv5">
